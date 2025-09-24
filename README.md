@@ -74,8 +74,21 @@ In their book "Data Networks", Bertsekas and Gallager provide a rule of thumb fo
 - [ ] Answer the questions in the file `Questions.md`.
 
 
+6-Plot M/M/1 performance metrics
+--------------------------------
+
+Currently, the `main` function in `main_mm1.py` only prints the results of a single simulation. We want to plot the performance metrics (E[T] and E[N] of the M/M/1 queueing system as a function of the utilization $\rho$.
+
+#### Todo
+
+- [ ] Write a script `plot_mm1.py` that runs a series of simulations with increasing utilization $\rho$. Keep $\mu=50/s$ constant and increase $\lambda$ from 0 to almost $\mu$.
+- [ ] Generate two plot files: `mm1_t.png` and `mm1_n.png` that show the mean response time E[T] and the mean number of clients in the system E[N] as a function of the utilization $\rho$.
+
+
 Checklist at the end of the lab
 -------------------------------
 
 - [ ] The simulation model `models/simpy_m_m_1.py` is completed and works correctly.
+- [ ] You have a script `plot_mm1.py` that runs a series of simulations and generates two plot files.
+- [ ] You have the two plot files `mm1_t.png` and `mm1_n.png`.
 - [ ] You have answered all the questions in the file `Questions.md`.

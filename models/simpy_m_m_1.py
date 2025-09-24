@@ -5,7 +5,6 @@ The service time is exponentially distributed.
 """
 
 from statistics import mean
-from numpy.random import exponential
 
 # ---------------------------------------------------------------------------
 class SimpyQueue:
@@ -26,6 +25,7 @@ class SimpyQueue:
         """Generate requests following a Poisson process."""
         while True:
             # ******** Add your code here ********
+            pass
 
 
     def process_request(self):
@@ -52,4 +52,4 @@ class SimpyQueue:
         """Compute and return the mean response time and mean number of clients in the system."""
         mean_response_time = mean(self.response_times)
         mean_clients_in_system = mean(self.clients_in_system)
-        return mean_response_time, mean_clients_in_system
+        return {'E[T]': mean_response_time, 'E[N]': mean_clients_in_system}
